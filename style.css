@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap'); 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size:62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', Tahoma, Geneva;
+    background-color: #00c1b5;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "head head head"
+    ".... hero ...."
+    "intro purchase issue";
+    height:100vh;
+    padding:1.6rem;
+}
+
+/*grid-template-areas*/
+
+header{
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+h1{
+    text-transform:uppercase;
+    font-size:3rem;
+}
+h2{
+    font-size:1.6rem;
+    font-weight: 500;
+}
+
+
+.hero_section{
+    grid-area: hero;
+    
+    text-align: center;
+}
+
+.hero_section img{
+    width:28vw;
+}
+
+.intro_section{
+    grid-area: intro;
+   
+    position: relative;
+    top:-7rem;
+}
+
+.intro_section > p:first-child{
+    font-size:1.8rem;
+    font-weight:700;
+    line-height: 1.4;
+    width:30rem;
+}
+.intro_section > p:nth-child(2){
+    margin-top:1.6rem;
+    font-size:1.2rem;
+    font-weight:400;
+}
+
+.intro_section > p:last-child{
+    margin-top: 1rem;
+}
+
+.purchase_section{
+    grid-area: purchase;
+    text-align:center;
+    line-height:4rem;
+    justify-self: center;
+}
+
+.purchase_section_buy{
+    color:white;
+
+}
+.issue_section{
+    grid-area:issue;
+    
+    justify-self:end;
+    /* align-self: end; */
+}
+
+ul{
+    margin-bottom:2.6rem;
+}
+
+li{
+    list-style-type:none;
+    line-height: 1.6;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
